@@ -1,0 +1,18 @@
+
+<h1>
+    Items
+</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    
+    <p>{{forms.as_p}}</p>
+    <button type="submit">Submit</button>
+</form>
+
+
+{% if messages %}
+{% for message in messages %}
+{{message}}
+{% endfor %}
+{% endif %}

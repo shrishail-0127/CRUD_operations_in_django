@@ -1,0 +1,6 @@
+
+<h1>Items List</h1>
+<a href="{% url 'item-create' %}">Create</a>
+{% for item in items %}
+<a   href="{% url 'item-detail' pk=item.pk %}"><ul>{{item}}</ul> </a> 
+{% endfor %}
